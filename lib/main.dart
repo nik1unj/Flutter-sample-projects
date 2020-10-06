@@ -1,6 +1,8 @@
-import 'package:flutter/material.dart';
 import 'dart:async';
-import 'package:second/nextscreen.dart';
+
+import 'package:flutter/material.dart';
+
+import 'package:second/mainPage.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -18,9 +20,8 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   void completed() {
-    Navigator.of(context).pushReplacement(
-      MaterialPageRoute(builder: (context) => Nextscreen()),
-    );
+    Navigator.of(context)
+        .push(MaterialPageRoute(builder: (context) => MainPage()));
   }
 
   @override
@@ -34,11 +35,12 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       backgroundColor: Colors.red,
       body: Center(
-        child: Text(
-          "Splash\nScreen",
-          style: TextStyle(
-              color: Colors.white, fontSize: 50.0, fontFamily: "Cursive"),
-        ),
+        child: Text("Welcome to MyApp",
+            style: TextStyle(
+              fontFamily: "Cursive",
+              color: Colors.white,
+              fontSize: 50.0,
+            )),
       ),
     );
   }
