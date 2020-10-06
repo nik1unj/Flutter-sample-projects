@@ -14,7 +14,7 @@ class _NextscreenState extends State<Nextscreen> {
               context: context,
               builder: (context) => AlertDialog(
                     title: Text("Warning"),
-                    content: Text("Are you sure to exit ? "),
+                    content: Text("Are you sure to exit ?... "),
                     actions: <Widget>[
                       FlatButton(
                         onPressed: () {
